@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #ffd1dc 0%, #ff9a9e 100%);
+}
+
+.heart {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.heart img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: path('M 175 60 C 175 0, 0 0, 0 105 C 0 210, 175 300, 175 350 C 175 300, 350 210, 350 105 C 350 0, 175 0, 175 60 Z');
+  /* Adjusted the SVG path for a smoother and smaller heart shape */
+}
