@@ -6,7 +6,7 @@ const Home = () => {
   const navigate = useNavigate();
   const handleClick = async () => {
     if (instaId.length > 0) {
-      navigate(`/${instaId}`);
+      navigate(`/${instaId.toLowerCase()}`);
       setInstaId("");
     }
   };
