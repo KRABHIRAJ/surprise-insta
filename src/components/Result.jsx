@@ -29,13 +29,13 @@ const Result = () => {
     try {
       const data = await getUserData(params?.instaId);
       if (data) {
-        if(data?.result?.user?.has_anonymous_profile_picture === true){
-            dispatch(setErrorMsg('Private account. We do not breach privacy 🩷.'));
-            naviagte('/error')
-        }else{
+        // if(data?.result?.user?.has_anonymous_profile_picture === true){
+        //     dispatch(setErrorMsg('Private account. We do not breach privacy 🩷.'));
+        //     naviagte('/error')
+        // }else{
             localStorage.setItem(params?.instaId, JSON.stringify(data));
             setUserData(data);
-        }
+        // }
       }else{
         dispatch(setErrorMsg('Too Many Requests. Please try again after 2 minutes.'));
         naviagte('/error')
@@ -83,10 +83,9 @@ const Result = () => {
             crossOrigin="anonymous"
           />
         </div>
-
         <p className="text-2xl text-pink-700 text-center px-4">{quote}</p>
 
-        <p className="text-4xl text-pink-700 text-center px-4">I 🩷 U</p>
+        <p className="text-4xl text-pink-700 text-center px-4">Will U be my Date🩷?</p>
       </div>
     </div>
   );
